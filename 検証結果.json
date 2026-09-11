@@ -1,0 +1,100 @@
+{
+  "documentWidth": 1425,
+  "h1": 1,
+  "h2": 10,
+  "h3": 24,
+  "images": [
+    {
+      "alt": "山科区の不動産売却記事のアイキャッチ予定枠。生成画像はまだ入っていません。",
+      "loaded": true
+    },
+    {
+      "alt": "不動産売却の契約資料を確かめる場面の画像予定枠。生成画像はまだ入っていません。",
+      "loaded": true
+    },
+    {
+      "alt": "山科区のエリアと暮らしを紹介する画像予定枠。生成画像はまだ入っていません。",
+      "loaded": true
+    }
+  ],
+  "missingAnchors": [],
+  "paragraphChars": 1979,
+  "tables": 5,
+  "targetChars": 12200,
+  "viewport": 1440,
+  "mobile": {
+    "width": 390,
+    "documentWidth": 375,
+    "pageOverflow": false,
+    "tableScrollContainers": 5
+  },
+  "status": "skeleton_verified_content_incomplete",
+  "bodyMinimumMet": false,
+  "generatedImages": 0,
+  "consultationConnected": false,
+  "publication": false,
+  "filesystemUtf8Verified": true,
+  "filesBeforeManifest": [
+    {
+      "file": "00_レオへ_使い方と残件.md",
+      "bytes": 6450,
+      "sha256": "eb97a1e0dd858a38c6c4093cb1d3c87204f9860d50d36ae7d453cfc5a064ed07"
+    },
+    {
+      "file": "output\\playwright\\PC_会社選び.png",
+      "bytes": 67064,
+      "sha256": "00d1ed35540ac86d6d098748b6d6755d3c3c10eec5a849d623d5cca5806d3972"
+    },
+    {
+      "file": "output\\playwright\\PC_冒頭.png",
+      "bytes": 67783,
+      "sha256": "5e805d54bc38efade8f0c2fd1066a9396dde183dad2fb90ee1e7ac61b07437eb"
+    },
+    {
+      "file": "output\\playwright\\スマホ_会社選び.png",
+      "bytes": 35964,
+      "sha256": "7fbe8fac97ccbba6d220286069ebc4b08f258934d4502b4154fd2ddb8c48e9a3"
+    },
+    {
+      "file": "output\\playwright\\スマホ_冒頭.png",
+      "bytes": 28326,
+      "sha256": "f851de6d7b5f52f44c3d8da9871d840ec0764ec9cd243f73f3c8a83431ecde53"
+    },
+    {
+      "file": "output\\playwright\\スマホ_相談入口.png",
+      "bytes": 25935,
+      "sha256": "1d3a5661cfe9ac5d7245302ec5e33a5821230dfa83fc6e973a35b1261e5b87ff"
+    },
+    {
+      "file": "画像プロンプト_Terraへ.md",
+      "bytes": 6907,
+      "sha256": "ac2cff2b09c30eae2a929e6aedd14c8a5ea72a746b877df137bb0ea5d5d0d814"
+    },
+    {
+      "file": "画像枠.svg",
+      "bytes": 473,
+      "sha256": "42022ee41cdd5f4d10a832234268a007323b74c75b11e9e1f9bef6fb4105f530"
+    },
+    {
+      "file": "記事.html",
+      "bytes": 28205,
+      "sha256": "f9137d75704ff6f7367097cbdbb9457acf080a2bdee6e83b9d949c665ab77826"
+    },
+    {
+      "file": "誌面.css",
+      "bytes": 10564,
+      "sha256": "ea56614c9a1946f87eac31c9d64c08772b11c4d122dd72fc79c9d266d8fb6734"
+    }
+  ],
+  "checks": {
+    "pc_1440_visual": "PASS",
+    "mobile_390_visual": "PASS",
+    "in_page_anchors": "PASS",
+    "cta_disabled": "PASS",
+    "page_horizontal_overflow": "NONE",
+    "all_img_alt": "PASS",
+    "body_11802": "NOT_MET_SKELETON",
+    "image_generation": "NOT_STARTED",
+    "live_publication": "NOT_STARTED"
+  }
+}
