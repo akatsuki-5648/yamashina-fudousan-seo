@@ -1,0 +1,246 @@
+/* 山科の誌面 — 2026-09-12 / 本文と見出しの意味構造は保持 */
+:root{--paper:#eef2f4;--white:#ffffff;--ink:#102732;--green:#244b5c;--red:#087c94;--muted:#596d78;--wash:#e3eaee;--rule:#cbd8df;--accent:#8de0ed;--radius:26px}
+body{background:var(--paper);line-height:2;letter-spacing:.025em}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:url("images/08-mineral-glass.png") center/cover;opacity:.16;pointer-events:none}
+.wrap{width:min(1400px,calc(100% - 104px))}
+.draft-note{background:#102732;color:#e2ecf1;font-size:11px;padding:5px 20px}
+.masthead{position:relative;z-index:20;border:0;padding-block:26px;gap:24px}
+.wordmark{font-size:34px;letter-spacing:.08em;display:flex;align-items:center;gap:15px}
+.wordmark span{font-size:11px;margin:0;padding-left:16px;letter-spacing:.08em}
+.masthead nav{gap:20px;font-size:12px}
+.masthead nav a{transition:color .2s,background .2s;white-space:nowrap}
+.masthead nav a:hover{color:var(--red)}
+.masthead .nav-cta{background:var(--green);color:var(--white);border:0!important;border-radius:50px;padding:13px 20px}
+.cover{isolation:isolate;position:relative;grid-template-columns:1.08fr 1fr;gap:clamp(26px,4vw,70px);padding:60px 0 88px;min-height:730px}
+.cover::before{content:"";position:absolute;z-index:-1;inset:0 34% 12px -52px;background:linear-gradient(90deg,#f3f0e5ea,#f3f0e599),url("images/08-mineral-glass.png") center/cover;border-radius:0 180px 0 0}
+.cover-copy{position:relative;z-index:2}
+.cover .eyebrow{font-size:11px;letter-spacing:.2em;display:flex;align-items:center;gap:14px;margin-bottom:24px}
+.cover .eyebrow::before{content:"";width:26px;height:2px;background:var(--red)}
+.display-copy{font-size:clamp(40px,4.7vw,76px);line-height:1.4;letter-spacing:.055em;margin-bottom:30px;font-weight:500}
+.cover h1{font-size:clamp(19px,1.65vw,25px);line-height:1.85;max-width:31em}
+.cover .lead{font-size:14px;max-width:35em;line-height:2.1}
+.cover-meta{display:inline-flex;align-items:center;background:#dce8ee;border-radius:50px;padding:7px 15px;margin-top:20px;font-size:11px}
+.cover-image{min-height:520px;position:relative;transform:translateY(20px)}
+.cover-image img{border-radius:180px 14px 110px 14px;box-shadow:20px 28px 0 #b7cbd5;object-position:center;transition:border-radius .8s}
+.cover-image:hover img{border-radius:150px 28px 90px 28px}
+.cover-image figcaption{position:relative;margin:22px 0 0;padding:0 18px;font-size:10px;line-height:1.7}
+.image-label{right:-14px;top:22%;padding:20px 9px;border-radius:30px;background:var(--white);color:var(--green);box-shadow:0 8px 30px #10273210}
+.reading-layout{border:0;grid-template-columns:225px minmax(0,1fr);gap:clamp(35px,5vw,85px);padding-top:36px}
+.contents{top:30px;padding:22px 20px 26px;background:#ffffff8c;border-radius:20px}
+.contents>.eyebrow,.contents nav>.eyebrow{font-size:12px}
+.contents ol{margin:20px 0}
+.contents li{border:0;padding:9px 0;font-size:12px}
+.contents a{gap:12px;line-height:1.65;border-radius:8px;transition:background .2s,color .2s;padding:3px}
+.contents a:hover,.contents a[aria-current="location"]{color:var(--red);background:#deedf3}
+.contents a[aria-current="location"]{font-weight:700}
+.aside-note{font-size:11px;margin:0}
+.article-body{max-width:1030px}
+.chapter{position:relative;border:0;padding:38px 0 76px;margin-bottom:0;scroll-margin-top:25px}
+.chapter-heading{position:relative;padding:38px 40px;background:#dde8ee;border-radius:24px 24px 72px 24px;margin-bottom:36px;overflow:hidden}
+.chapter-heading::after{content:"";position:absolute;width:150px;height:150px;right:-40px;top:-65px;border-radius:50%;background:#ffffff48;pointer-events:none}
+.kicker{margin:0;font-size:11px;letter-spacing:.14em}
+.chapter-copy{font-size:clamp(28px,3vw,43px);line-height:1.55;letter-spacing:.035em;margin:18px 0 20px}
+.chapter-heading h2{font-size:clamp(18px,1.6vw,23px);font-weight:600;border:0;padding:0;margin:0;line-height:1.8;position:relative;max-width:36em}
+.chapter>p,.chapter>h3{max-width:49em}
+.chapter>p{font-size:15px;line-height:2.15}
+.chapter h3{font-size:20px;margin:2.3em 0 1em;line-height:1.8}
+.answer{border:0;background:#ffffff;border-radius:14px;padding:22px 26px;font-weight:600}
+.table-scroll{border-radius:16px;background:#ffffff;box-shadow:0 8px 35px #1b352809;padding:10px 16px 16px}
+table{font-size:14px;min-width:480px}
+th,td{border-color:#dde6eb;padding:18px}
+thead{background:#173b4d}
+tbody tr:nth-child(even){background:#edf3f6}
+caption{padding:12px 4px 20px}
+.source{background:#e4ecf0;border:0;padding:19px 24px;border-radius:12px;font-size:12px}
+.formula{padding:30px;background:#102732;color:#ffffff;border-radius:20px}
+.formula>span,.formula small{color:#a6deec}
+.formula p{font-family:var(--serif);font-size:clamp(21px,2.8vw,35px);line-height:1.7}
+.flow-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;counter-reset:step}
+.flow-list li{position:relative;display:block;background:#e2ecf1;border:0;border-radius:16px;padding:24px 22px 24px 62px}
+.flow-list li::before{position:absolute;left:20px;top:23px;font-family:var(--serif);font-size:22px}
+.flow-list strong{display:block;font-size:16px}
+.flow-list span{display:block;margin-top:7px;font-size:13px}
+.core-chapter{background:#102732;color:#f3f7fa;border-radius:30px;margin:30px -28px 55px;padding:32px 36px 42px}
+.core-chapter .chapter-heading{background:#244b60;color:#ffffff}
+.core-chapter .answer{background:#23485c}
+.core-chapter h3{color:#aee4f2}
+.core-chapter .source{background:#1b3c4c}
+.core-chapter .source a{color:#f0f7fa}
+.core-chapter .chapter-copy{color:#b6e9f5}
+.core-chapter .law-item{border:0;background:#1b3c4c;border-radius:16px;margin-bottom:18px;padding:24px}
+.core-chapter .law-item h3{margin-top:0}
+.core-chapter .table-scroll{background:#f4f7f9}
+.core-chapter caption{color:#1e4356}
+.core-chapter .scope-note{border-color:#758878;border-radius:15px}
+.inset-image img,.area-image img{border-radius:20px;aspect-ratio:2.3}
+.inset-image,.area-image{position:relative}
+.faq-item{border:0;border-radius:18px;background:#ffffff;margin-bottom:12px;padding:24px 28px}
+.faq-item h3{margin-top:0;font-size:17px}
+.consultation{position:relative;isolation:isolate;background:#dae8ee;border:0;border-radius:30px;padding:44px 42px;overflow:hidden}
+.consultation::before{content:"";z-index:-1;position:absolute;inset:0;background:linear-gradient(90deg,#dae8eeef,#dae8eebf),url("images/08-mineral-glass.png") center/cover}
+.consultation-title{font-size:clamp(28px,3vw,42px)}
+.cta{border-radius:50px;background:#163f53}
+.footer{border:0;background:#102732;color:#eff8ff;border-radius:30px 30px 0 0;padding:48px;margin-top:44px}
+.footer-map{display:grid;grid-template-columns:1fr 1fr;gap:14px 40px}
+.footer-map a,.footer-bottom a,.footer-copy{color:#edf7fd}
+.footer-notes{background:#1d3d4f;color:#edf7fd;border:0;border-radius:18px;padding:26px}
+.footer-notes p{color:#d4e7f0;font-size:13px}
+.footer-notes strong{color:#9fd9eb}
+.footer-map a{font-size:14px}
+.page-inshi{--red:#247e9d}
+.page-inshi .cover::before{background:linear-gradient(90deg,#eee4d2ec,#f5f0e580),url("images/08-mineral-glass.png") center/cover;border-radius:0 0 150px 0}
+.page-inshi .cover-image img{border-radius:18px;box-shadow:18px 18px 0 #9abcc9;transform:rotate(2deg)}
+.page-inshi .chapter-heading{background:#e2edf3;border-radius:8px 45px 8px 8px}
+.page-tesuryo .cover{grid-template-columns:1fr 1.15fr}
+.page-tesuryo .cover-image img{border-radius:18px 130px 18px 18px}
+.page-tesuryo .chapter-heading{background:#e5eff3;border-radius:0;padding-left:34px;border-left:5px solid #215d77}
+.page-shorui .cover-image{transform:translateY(-4px)}
+.page-shorui .cover-image img{border-radius:95px 20px 20px 20px;box-shadow:14px 14px 0 #d1e3eb,28px 28px 0 #9eb9c9}
+.page-shorui .chapter-heading{background:#e4edf2;border-radius:20px 20px 0 0}
+.page-shorui .check-table{font-size:15px}
+.page-kaisha .cover{grid-template-columns:1fr 1fr}
+.page-kaisha .cover-image img{border-radius:180px 180px 14px 14px}
+.page-kaisha .chapter-heading{background:#183d52;color:#f0f6fa}
+.page-kaisha .chapter-heading .kicker{color:#afe0ed}
+.page-chika .cover{display:grid;grid-template-columns:1fr;min-height:0;padding-top:35px}
+.page-chika .cover-copy{display:grid;grid-template-columns:1.1fr 1fr;gap:0 50px}
+.page-chika .cover .eyebrow,.page-chika .display-copy{grid-column:1}
+.page-chika .cover h1,.page-chika .cover .lead,.page-chika .cover-meta{grid-column:2}
+.page-chika .cover h1{grid-row:1/3;align-self:center}
+.page-chika .cover .lead{grid-row:3}
+.page-chika .cover-meta{grid-row:4;justify-self:start}
+.page-chika .cover-image{height:380px;min-height:0;transform:none}
+.page-chika .cover-image img{border-radius:20px;box-shadow:none}
+.page-chika .chapter-heading{background:#d9e7ee;border-radius:18px 70px 18px 18px}
+.page-soudan .cover{grid-template-columns:1.15fr 1fr}
+.page-soudan .cover-image img{border-radius:200px 200px 200px 20px;box-shadow:none}
+.page-soudan .chapter-heading{background:#dce9f0;border-radius:60px 18px 18px 18px;padding-left:45px}
+.page-top #area .chapter-heading{background:linear-gradient(90deg,#e7ebdcf5,#e7ebdcc9),url("images/03-yamashina-street.webp") center/cover}
+.page-top #documents .chapter-heading{background:linear-gradient(90deg,#f0ebddf5,#f0ebddc9),url("images/06-documents-list.webp") center/cover}
+.page-top #stamp .chapter-heading{background:linear-gradient(90deg,#f0ebddf5,#f0ebddc9),url("images/04-stamp-tax.webp") center/cover}
+.reading-progress{position:fixed;top:0;left:0;width:100%;height:3px;background:var(--red);transform:scaleX(var(--read-progress,0));transform-origin:left;z-index:100;pointer-events:none}
+.back-top{position:fixed;bottom:22px;right:24px;z-index:30;width:42px;height:42px;background:#102732;color:white;border-radius:50%;display:grid;place-items:center;text-decoration:none;box-shadow:0 4px 20px #10273220}
+@media(prefers-reduced-motion:no-preference){
+.cover-copy{animation:opening .75s both}.cover-image{animation:opening 1s both}
+@keyframes opening{from{opacity:.4;translate:0 15px}to{opacity:1;translate:0 0}}
+.chapter-heading{transition:box-shadow .4s}.chapter-heading:hover{box-shadow:0 16px 40px #1027320b}
+}
+@media(max-width:1150px){.wrap{width:calc(100% - 56px)}.masthead{align-items:flex-start}.wordmark{font-size:28px}.masthead nav{gap:12px;flex-wrap:wrap;justify-content:flex-end}.wordmark span{display:block;font-size:10px}.cover{gap:30px;min-height:640px}.cover-image{min-height:440px}.reading-layout{grid-template-columns:190px minmax(0,1fr);gap:36px}.chapter-heading{padding:30px}.core-chapter{margin-inline:0}.footer{padding:36px}.display-copy{font-size:clamp(35px,4.7vw,65px)}}
+@media(max-width:760px){
+.wrap{width:calc(100% - 36px)}.masthead{display:block;padding:18px 0 12px}.wordmark{display:flex;font-size:29px}.wordmark span{border-left:1px solid #bed2de;padding-left:15px;font-size:11px}
+.masthead nav{display:flex;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;gap:18px;padding:18px 0 8px;font-size:12px;scrollbar-width:thin}.masthead nav a:not(.nav-cta){display:block}.masthead .nav-cta{padding:6px 14px;flex-shrink:0}
+.cover,.page-tesuryo .cover,.page-kaisha .cover,.page-soudan .cover{display:flex;flex-direction:column;gap:24px;padding:30px 0 45px;min-height:0}
+.cover::before{inset:0 -18px 28% -18px;border-radius:0 80px 0 0}
+.cover-copy{width:100%}.display-copy{font-size:clamp(31px,8.4vw,53px);line-height:1.5;margin-bottom:25px}.cover .eyebrow{font-size:10px;margin-bottom:22px}.cover h1{font-size:20px;max-width:none}.cover .lead{font-size:14px}.cover-meta{margin-top:6px}
+.cover-image{width:100%;min-height:0;transform:none;height:auto;padding-right:10px}.cover-image img{width:100%;height:310px;min-height:0;flex:none;border-radius:90px 12px 60px 12px;box-shadow:10px 12px 0 #b7cbd5}.cover-image figcaption{padding:0;margin-top:20px}.image-label{right:-7px;top:15%;font-size:10px}
+.page-shorui .cover-image{transform:none}.page-shorui .cover-image img{box-shadow:7px 7px 0 #d1e3eb,14px 14px 0 #9eb9c9}
+.page-chika .cover-copy{display:block}.page-chika .cover-image{height:auto}.page-chika .cover-image img{height:260px}
+.page-kaisha .cover-image img{border-radius:90px 90px 12px 12px}
+.page-soudan .cover-image img{border-radius:100px 100px 100px 12px}
+.reading-layout{display:block;padding-top:10px}.contents{position:relative;top:auto;padding:22px;margin-bottom:24px;background:#e0ecf2}.contents ol{columns:1;display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.contents li{padding:8px 0;font-size:11px}.contents a{gap:8px}
+.chapter{padding:24px 0 42px}.chapter-heading{padding:26px 23px;border-radius:20px 20px 48px 20px;margin-bottom:28px}.chapter-copy{font-size:clamp(24px,7vw,34px);margin-block:14px 19px}.chapter-heading h2{font-size:19px;line-height:1.8}.chapter>p{font-size:15px}.chapter h3{font-size:19px}
+.flow-list{grid-template-columns:1fr}.flow-list li{padding:20px 22px 20px 58px}.table-scroll{padding:8px;border-radius:12px}th,td{padding:15px}.answer{padding:20px}
+.core-chapter{padding:22px 18px;margin-inline:-4px;border-radius:22px}.core-chapter .chapter-heading{padding:23px 19px}.core-chapter .chapter-copy{font-size:29px}.core-chapter .law-item{padding:20px 14px;gap:12px}
+.consultation{padding:28px 24px;border-radius:22px}.footer{padding:30px 24px;border-radius:22px 22px 0 0}.footer-map{grid-template-columns:1fr}.footer-notes{padding:20px}.footer-bottom{display:block}.back-top{right:14px;bottom:14px;width:38px;height:38px}
+}
+@media print{body::before,.reading-progress,.back-top{display:none}.cover::before{display:none}.chapter-heading,.core-chapter{background:none;color:black;box-shadow:none}.chapter-heading{padding:0}.cover-copy{animation:none}.article-body{max-width:none}}
+/* Mineral / Glass — 和紙・紙の重なりから現代的な建築エディトリアルへ */
+:root{--serif:"Yu Gothic","Hiragino Kaku Gothic ProN","Meiryo",sans-serif;--radius:14px}
+body{background:#edf2f5}
+body::before{display:none}
+.draft-note{background:#091c28;color:#a6c2d0}
+.masthead{color:#edf7fd;background:#102732;border-bottom:1px solid #ffffff20}
+.masthead::before{content:"";position:absolute;inset:0 calc((min(1400px,100vw - 104px) - 100vw)/2);background:#102732;z-index:-1}
+.wordmark{color:#f6fbff;letter-spacing:.04em;font-weight:700}
+.wordmark span{color:#bacfdc;font-weight:500}
+.masthead nav a,.masthead nav a[aria-current="page"]{color:#e3f1f8}
+.masthead nav a[aria-current="page"]{border-color:#8de0ed}
+.masthead .nav-cta,.masthead nav a.nav-cta[aria-current="page"]{color:#102732;background:#a9e5f0;border-radius:8px}
+.cover{color:#f3f8fc;min-height:740px;padding-block:68px 84px;gap:5%;grid-template-columns:1.15fr .95fr}
+.cover::before,.page-inshi .cover::before{inset:0 calc((min(1400px,100vw - 104px) - 100vw)/2);border-radius:0;background:linear-gradient(90deg,#102732f5 5%,#102732dd 45%,#10273250),url("images/08-mineral-glass.png") center/cover}
+.cover .eyebrow{color:#a1dce9;font-size:11px}
+.cover .eyebrow::before{background:#8de0ed;width:36px}
+.display-copy{font-weight:600;font-size:clamp(38px,4.5vw,70px);line-height:1.45;letter-spacing:-.045em}
+.cover h1{color:#f3f8fc;font-weight:500}
+.cover .lead{color:#c5d9e4}
+.cover-meta{background:#ffffff0d;border:1px solid #ffffff26;color:#bdd5e2;border-radius:5px}
+.cover-meta span{color:#8de0ed}
+.cover-image{min-height:450px;max-height:610px;align-self:center;transform:none}
+.cover-image img,.cover-image:hover img{height:470px;flex:none;border-radius:12px;box-shadow:18px 18px 0 #ffffff08;object-fit:cover}
+.cover-image figcaption{color:#b2ccd9;margin-top:26px;padding:0;max-width:46em}
+.image-label{background:#ffffffd9;color:#153c50;backdrop-filter:blur(14px);border:1px solid #ffffff5c;right:-12px;border-radius:5px;font-weight:600}
+.reading-layout{padding-top:65px}
+.contents{border-radius:10px;border:1px solid #d4e0e7;background:#ffffffb3;backdrop-filter:blur(16px)}
+.chapter-heading{background:linear-gradient(115deg,#e1ebf1,#f7fafc);border-radius:8px;padding:36px 0 32px;border-top:1px solid #bdcfd9}
+.chapter-heading::after{display:none}
+.chapter-copy{font-weight:600;letter-spacing:-.025em;line-height:1.55;font-size:clamp(27px,2.8vw,42px)}
+.chapter-heading h2{font-weight:500;max-width:38em;color:#365568}
+.chapter-heading .kicker{font-family:monospace;color:#377188;letter-spacing:.15em}
+.answer{border-radius:8px;border-left:3px solid #2e7f99;box-shadow:0 10px 40px #14374b05}
+.table-scroll,.faq-item,.source{border-radius:8px}
+.formula{border-radius:12px;background:linear-gradient(115deg,#112d3e,#245972)}
+.flow-list{gap:0;border-top:1px solid #bbd0dc;border-bottom:1px solid #bbd0dc}
+.flow-list li{background:transparent;border-radius:0;border-bottom:1px solid #d3e0e8;padding-block:30px}
+.flow-list li:nth-child(odd){border-right:1px solid #d3e0e8}
+.flow-list li::before{top:30px;font-weight:600;color:#1c7897}
+.core-chapter{border-radius:12px;background:linear-gradient(145deg,#102b3c,#15364b);padding:36px}
+.core-chapter .chapter-heading{background:transparent;padding-inline:0;border-color:#ffffff35;color:white}
+.core-chapter .chapter-heading h2{color:#d7eaf3}
+.core-chapter .kicker,.core-chapter .law-number{color:#9fdaeb}
+.core-chapter .law-item{border-radius:8px}
+.core-chapter .small,.core-chapter .flow-list span{color:#c5dbe7}
+.core-chapter .faq-item,.core-chapter .formula{background:#21485e;color:#f2f9fd}
+.core-chapter thead{background:#163c51}
+.consultation{border-radius:12px;background:#d9eaf2}
+.consultation::before{background:linear-gradient(90deg,#e1eff5fc,#e1eff5d9),url("images/08-mineral-glass.png") center/cover}
+.consultation-title{font-weight:600;letter-spacing:-.035em}
+.cta{border-radius:8px}
+.footer{border-radius:12px 12px 0 0;background:#102732}
+.footer-notes{border-radius:8px}
+.page-inshi .cover{grid-template-columns:1.15fr .85fr}
+.page-inshi .cover-image img{border-radius:4px;box-shadow:16px 16px 0 #7aa1b322;transform:none;object-position:center}
+.page-inshi .chapter-heading{background:transparent;border-radius:0;border-top:2px solid #a0bdcc}
+.page-tesuryo .cover-image img{border-radius:12px;box-shadow:0 0 0 1px #b1d3e933,18px 18px 0 #b1d3e90b}
+.page-tesuryo .chapter-heading{background:#e0edf4;border-radius:8px;border-left:0;border-top:0;padding:32px}
+.page-shorui .cover-image img{border-radius:8px;box-shadow:14px 14px 0 #7cacc224,0 0 0 1px #cee8f522}
+.page-shorui .chapter-heading{border-radius:0;background:transparent;border-top:0;border-left:3px solid #4a869f;padding:8px 0 8px 28px}
+.page-kaisha .cover-image img{border-radius:8px;box-shadow:none;aspect-ratio:1}
+.page-kaisha .chapter-heading{background:#173d53;color:#eef7fc;border:0;padding:36px;border-radius:10px}
+.page-kaisha .chapter-heading h2{color:#cfdfeb}
+.page-kaisha .chapter-heading .kicker{color:#9fd9eb}
+.page-chika .cover{padding-top:56px}
+.page-chika .cover-image{max-height:none;align-self:stretch}
+.page-chika .cover-image img{height:350px;border-radius:8px;object-position:center 52%}
+.page-chika .chapter-heading{border-radius:0;background:transparent}
+.page-soudan .cover-image img{border-radius:12px;box-shadow:none}
+.page-soudan .chapter-heading{background:#e3edf4;border:0;padding:32px;border-radius:10px}
+.page-top #area .chapter-heading{padding:38px;background:linear-gradient(90deg,#102732f2,#102732b8),url("images/03-yamashina-street.webp") center/cover;color:#f0f7fc;border-radius:10px;border:0}
+.page-top #area .chapter-heading h2,.page-top #area .kicker{color:#cfebf6}
+.page-top #documents .chapter-heading,.page-top #stamp .chapter-heading{background:transparent}
+.back-top{border-radius:8px}
+@media(max-width:1150px){
+.masthead::before,.cover::before,.page-inshi .cover::before{inset-inline:-28px}
+.cover{min-height:660px}.cover-image img{height:440px}
+}
+@media(max-width:760px){
+.masthead::before,.cover::before,.page-inshi .cover::before{inset-inline:-18px}
+.masthead{padding-top:22px}.masthead nav{scrollbar-color:#578499 #173b4d}
+.cover,.page-inshi .cover{display:flex;flex-direction:column;min-height:0;padding-block:38px 46px;gap:30px}
+.cover::before,.page-inshi .cover::before{inset-block:0;border-radius:0;background-position:75% center}
+.display-copy{font-size:clamp(32px,8.4vw,52px);letter-spacing:-.05em}
+.cover h1{font-size:19px}.cover .lead{font-size:14px}
+.cover-image{max-height:none;min-height:0;padding:0;align-self:stretch}
+.cover-image img,.page-kaisha .cover-image img,.page-soudan .cover-image img,.page-shorui .cover-image img{height:280px;border-radius:8px;box-shadow:none}
+.cover-image figcaption{margin-top:16px}
+.page-chika .cover-image img{height:260px}
+.reading-layout{padding-top:30px}.contents{background:#f9fcfe}
+.chapter-heading{border-radius:0;padding:25px 0}
+.chapter-copy{font-size:clamp(25px,6.9vw,34px)}
+.chapter-heading h2{font-size:18px}
+.flow-list li:nth-child(odd){border-right:0}
+.core-chapter{padding:25px 20px}
+.page-kaisha .chapter-heading,.page-soudan .chapter-heading,.page-tesuryo .chapter-heading,.page-top #area .chapter-heading{padding:26px 22px}
+.page-shorui .chapter-heading{padding:8px 0 8px 20px}
+.footer{border-radius:10px 10px 0 0}
+}
+@media print{.cover{color:black}.cover h1,.cover .lead{color:black}.chapter-heading h2,.core-chapter .chapter-heading h2{color:black}.chapter-heading{background:none}.flow-list{display:block}}
