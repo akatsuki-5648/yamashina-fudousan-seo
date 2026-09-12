@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://akatsuki-5648.github.io/yamashina-fudousan-seo/sitemap.xml
